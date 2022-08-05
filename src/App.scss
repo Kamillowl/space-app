@@ -1,0 +1,34 @@
+header {
+  font-size: 10px;
+  padding: 4px 12px;
+  h1 {
+    display: inline-block;
+    transform: rotate(-8deg);
+  }
+}
+main {
+  text-align: center;
+  z-index: 90;
+  .grid-display {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .label-wrap {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 12px 0;
+  }
+  fieldset {
+    display: flex;
+    legend {
+      font-size: 12px;
+      padding: 0;
+      margin: 0;
+    }
+    > .label-wrap {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.LinkExpandBox {
+  margin: 12px;
+  display: inline-block;
+  position: relative;
+
+  &:nth-child(odd) {
+    margin-top: 50px;
+    width: calc(20vw - 24px);
+  }
+  &:nth-child(even) {
+     margin-bottom: 40px;
+    width: calc(30vw - 24px);
+   }
+
+  button {
+    background-color: RGBA(255, 255, 255, 1);
+    color: black;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      background-color: RGBA(255, 255, 255, .8);
+    }
+  }
+
+  .expandable-area {
+    padding: 12px;
+    padding-bottom: 80px;
+    text-align: left;
+    background-color: RGBA(255, 255, 255, .4);
+
+    .btn-expandview {
+      background-color: white;
+      box-shadow: 1px -2px 10px 4px RGBA(255, 255, 255, .6);
+      position: absolute;
+      bottom: 20px;
+      left: 12px;
+      right: 12px;
+      width: calc(100% - 24px);
+    }
+  }
+
+  &.expanded-view {
+    position: fixed;
+    background-color: black;
+    overflow: auto;
+    z-index: 99;
+    width: calc(100vw - 80px);
+    top: 50px;
+    left: 40px;
+    right: 40px;
+    .expandable-area {
+      position: relative;
+      min-height: 50vh;
+    }
+  }
+  &.small-view {
+    max-height: 40vh;
+    overflow: hidden;
+  }
+}
