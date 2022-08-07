@@ -1,0 +1,78 @@
+header.generalheader {
+  padding: 4px 12px 20px;
+  h1 {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .animations-btn {
+    font-size: 10px;
+    float: right;
+    background-color: transparent;
+    outline: none;
+    color: whitesmoke;
+    border: 1px solid;
+    padding: 6px;
+    border-radius: 4px;
+  }
+  .space-styling {
+    position: relative;
+    .stripe {
+      position: absolute;
+      width: 25vw;
+      height: 2px;
+      background-color: white;
+      //transform: rotate(-186deg);
+      animation: widthFix 10s infinite linear;
+      animation-name: widthFix;
+
+      &:nth-child(1) {
+        right: 72vw;
+      }
+      &:nth-child(2) {
+        right: 51vw;
+        top: 6px;
+      }
+      &:nth-child(3) {
+        left: 51vw;
+        top: 6px;
+        //transform: rotate(186deg);
+      }
+      &:nth-child(4) {
+        left: 72vw;
+        //transform: rotate(186deg);
+      }
+    }
+  }
+  nav {
+    margin: 20px 0;
+    a {
+      color: whitesmoke;
+      margin: 4px 12px;
+      &.current-page {
+        border-bottom: 1px solid;
+        font-size: 18px;
+        color: lightblue;
+      }
+    }
+  }
+  &.animations-off {
+    .space-styling {
+      .stripe {
+        animation: none;
+      }
+    }
+  }
+}
+@keyframes widthFix {
+  from {
+    width: 2px;
+  }
+
+  50% {
+    width: 25vw;
+  }
+
+  to {
+    width: 2px;
+  }
+}

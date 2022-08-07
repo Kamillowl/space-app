@@ -1,17 +1,6 @@
-import LinkExpandBox from "./Components/LinkExpandBox";
-import { useDispatch, useSelector } from "react-redux";
+import LinkExpandBox from "../Components/LinkExpandBox";
 
 const Main = () => {
-    const dispatch = useDispatch()
-    const {
-        hasImg,
-        message
-    } = useSelector((state) => state.myReducer)
-
-
-    const getPhoto = () => {
-        dispatch({ type: 'GET_DOG_PHOTO' })
-    }
     return (
         <main>
             <h2>En del UU kan løses ved å bruke riktige HTML-elementer</h2>
@@ -106,11 +95,6 @@ const Main = () => {
                     <p><i>Se for deg at du skal lage en innhodlsfortegnelse med indentering på riktige steder for hva som
                         hører sammen.</i></p>
                 </LinkExpandBox>
-
-                <article className="dog-section">
-                    <button className="dog-photo-btn" onClick={getPhoto}>Get{hasImg && message ? ' another' : ''} dog photo!</button>
-                    { (hasImg && message) && <img className='dog-img' src={message} />}
-                </article>
             </div>
         </main>
     );

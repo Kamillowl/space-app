@@ -1,0 +1,44 @@
+.mainMe {
+  h3 {
+    border-bottom: 1px solid;
+  }
+
+  .is-framework {
+    color: yellow;
+  }
+  .grid-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 33vw));
+    margin: 40px 0;
+    > .colspan-3 {
+      grid-column: 1 / span 3;
+    }
+    > * {
+      transition: font-size 1s;
+
+      &:hover {
+        font-size: 28px;
+      }
+    }
+  }
+  dl div {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    font-size: 18px;
+    dt {
+      font-weight: lighter;
+      &:after {
+        content: ':';
+      }
+    }
+    dd {
+      margin-left: 4px;
+    }
+  }
+
+
+  .txt-large {
+    font-size: 28px;
+  }
+}

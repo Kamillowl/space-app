@@ -6,6 +6,9 @@ function* getPhoto() {
     let dogPhoto = yield call(get, 'https://dog.ceo/api/breeds/image/random');
     if (dogPhoto.status = 'success')
     {
+        const arr = dogPhoto.message.split('/');
+        let indBreed = arr.findIndex(el => el === 'breeds');
+        if (indBreed && indBreed > 0) dogPhoto = { ...dogPhoto, breed: arr[indBreed + 1]}
         yield put({type: 'ADD_DOG_URL', payLoad: dogPhoto})
     } else {
         yield put({type: 'DOG_URL_FAILED', payLoad: dogPhoto})
