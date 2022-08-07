@@ -31,4 +31,25 @@ main {
       margin-right: 20px;
     }
   }
+  .dog-section {
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+
+    .dog-photo-btn {
+      background-color: darkred;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 12px auto;
+    }
+
+    .dog-img {
+      width: 80%;
+      margin: 12px auto;
+    }
+  }
 }

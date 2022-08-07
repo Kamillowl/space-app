@@ -9,7 +9,6 @@ function App() {
           <h1>Welcome to space</h1>
         </header>
           <Main />
-          <Footer />
       </>
   );
 }
