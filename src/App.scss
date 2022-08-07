@@ -2,10 +2,53 @@ header {
   font-size: 10px;
   padding: 4px 12px;
   h1 {
-    display: inline-block;
-    transform: rotate(-8deg);
+    text-align: center;
+    margin: 0 auto;
+  }
+  .space-styling {
+    position: relative;
+    .stripe {
+      position: absolute;
+      width: 25vw;
+      height: 2px;
+      background-color: white;
+      //transform: rotate(-186deg);
+      animation: widthFix 10s infinite linear;
+      animation-name: widthFix;
+
+      &:nth-child(1) {
+        right: 72vw;
+      }
+      &:nth-child(2) {
+        right: 51vw;
+        top: 6px;
+      }
+      &:nth-child(3) {
+        left: 51vw;
+        top: 6px;
+        //transform: rotate(186deg);
+      }
+      &:nth-child(4) {
+        left: 72vw;
+        //transform: rotate(186deg);
+      }
+    }
   }
 }
+@keyframes widthFix {
+  from {
+    width: 2px;
+  }
+
+  50% {
+    width: 25vw;
+  }
+
+  to {
+    width: 2px;
+  }
+}
+
 main {
   text-align: center;
   z-index: 90;
@@ -50,6 +93,8 @@ main {
     .dog-img {
       width: 80%;
       margin: 12px auto;
+      max-height: 80vh;
+      object-fit: contain;
     }
   }
 }

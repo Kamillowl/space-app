@@ -7,6 +7,12 @@ function App() {
       <>
         <header>
           <h1>Welcome to space</h1>
+            <div className='space-styling'>
+                <span className='stripe'></span>
+                <span className='stripe'></span>
+                <span className='stripe'></span>
+                <span className='stripe'></span>
+            </div>
         </header>
           <Main />
       </>
